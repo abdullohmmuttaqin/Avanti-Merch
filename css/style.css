@@ -113,7 +113,7 @@ body {
   position: absolute;
   /*background: salmon;*/
   inset: 0;
-  -webkit-mask-image: url('../img/Vector3.svg');
+  -webkit-mask-image: url('../img/Vector4.svg');
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-size: cover;
   -webkit-mask-position: center;
