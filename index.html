@@ -126,13 +126,14 @@
     <!-- Menu section end -->
 
     <!-- Products section start -->
-    <section class="products" id="products">
+    <section class="products" id="products" x-data="Products">
         <h2><span>Produk Unggulan</span> Kami</h2>
         <p>Kami mempunyai beberapa produk unggulan yang dimana produk tersebut telah terjual lebih dari 1000 pcs setiap
             bulannya, ini menandakan produk resmi bukan hanya sebuah identitas, melainkan sebuah apresiasi dari para
             penggemar kepada musisi/band kebanggan mereka.</p>
 
         <div class="row">
+            <template x-for="(item, index) in items" x-key="index">
             <div class="product-card">
                 <div class="product-icons">
                     <a href="#"><i data-feather="shopping-cart"></i></a>
@@ -153,6 +154,7 @@
                     <div class="product-price">IDR 649K <span>IDR 650K</span></div>
                 </div>
             </div>
+            </template>
         </div>
     </section>
     <!-- Products section end -->
