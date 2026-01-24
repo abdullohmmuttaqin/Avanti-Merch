@@ -89,7 +89,7 @@ body {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background-image: url("../img/header3-bg.jpg");
+  background-image: url("../img/header-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -113,7 +113,7 @@ body {
   position: absolute;
   /*background: salmon;*/
   inset: 0;
-  -webkit-mask-image: url('../img/header3-bg.svg');
+  -webkit-mask-image: url('../img/vector-header-bg.svg');
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-size: cover;
   -webkit-mask-position: center;
