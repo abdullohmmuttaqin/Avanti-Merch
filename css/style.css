@@ -113,7 +113,7 @@ body {
   position: absolute;
   /*background: salmon;*/
   inset: 0;
-  -webkit-mask-image: url('../img/Vector2.svg');
+  -webkit-mask-image: url('../img/Vector3.svg');
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-size: cover;
   -webkit-mask-position: center;
@@ -214,7 +214,8 @@ body {
 
 /* Menu section */
 .menu h2,
-.contact h2 {
+.contact h2,
+.products h2 {
   margin-bottom: 1rem;
 }
 
