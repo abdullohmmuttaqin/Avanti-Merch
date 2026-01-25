@@ -18,7 +18,7 @@ document.addEventListener('alpine:init', () => {
             this.items.push(newItem);
             this.quantity++;
             this.total += newItem.price;
-            console.log(newItem);
+            console.log(this.items);
         },
     });
 });
