@@ -214,13 +214,21 @@ body {
 
 .hero .mask-container {
   position: absolute;
-  /*background: salmon;*/
   inset: 0;
+
+  background: rgba(0,0,0,0.4); /* WAJIB ADA */
+
+  mask-image: url('../img/vector-header-bg.svg');
+  mask-repeat: no-repeat;
+  mask-size: cover;
+  mask-position: center;
+
   -webkit-mask-image: url('../img/vector-header-bg.svg');
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-size: cover;
   -webkit-mask-position: center;
 }
+
 
 .hero .content {
   padding: 1.4rem 7%;
