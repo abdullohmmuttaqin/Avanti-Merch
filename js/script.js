@@ -15,6 +15,13 @@ document.querySelector('search-button').onclick = (e) => {
   e.preventDefault();
 };
 
+// Toggle class active untuk shopping cart
+const shoppingCart = document.querySelector('.shopping-cart');
+document.querySelector('#shopping-cart-button').onclick = (e) => {
+  shoppingCart.classList.toggle('active');
+  e.preventDefault();
+};
+
 // Klik di luar sidebar untuk menghilangkan nav
 const hamburger = document.querySelector("#hamburger-menu");
 
