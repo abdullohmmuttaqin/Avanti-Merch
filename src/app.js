@@ -90,7 +90,14 @@ form.addEventListener('keyup', function () {
 
 });
 
-
+//kirim data ketika tombol checkout diklik
+checkoutButton.addEventListener('click', function (e){
+    e.preventDefault();
+    const formData = new FormData(form);
+    const data = new URLSearchParams(formData);
+    const objData = Object.fromEntries(data).items;
+    console.log(objData);
+});
 
 // Konversi ke Rupiah
 const rupiah = (Number) => {
