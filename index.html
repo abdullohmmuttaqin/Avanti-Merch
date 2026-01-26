@@ -76,6 +76,7 @@
 
             <div class="form-container" x-show="$store.cart.items.length">
                 <input type="hidden" name="items" x-model="JSON.stringify($store.cart.items)">
+                <input type="hidden" name="total" x-model="$store.cart.total">
                 <form action="" id="checkoutForm">
                     <h5>Customer Detail</h5>
 
