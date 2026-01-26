@@ -96,8 +96,22 @@ checkoutButton.addEventListener('click', function (e) {
     const formData = new FormData(form);
     const data = new URLSearchParams(formData);
     const objData = Object.fromEntries(data);
-    console.log(objData);
+    const message = formatMessage(objData);
+    window.open('https://wa.me/6282138768661?text=' + encodeURIComponent(message));
 });
+
+// format pesanan whatsapp
+const formatMessage = (obj) => {
+    return `Data Customer
+    Nama: ${obj.name}
+    Email: ${obj.email}
+    No HP: ${obj.phone}
+Data Pesanan 
+${JSON.parse(obj.items).map((item) => `${item.name} (${item.quantity} x ${rupiah(item.total)}) \n`)}
+TOTAL: ${rupiah(obj.total)}
+Terima Kasih.`;
+}
+
 
 // Konversi ke Rupiah
 const rupiah = (Number) => {
