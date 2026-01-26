@@ -162,13 +162,12 @@ body {
 }
 
 .shopping-cart img {
-  height: 6rem;
+  height: 4rem;
   border-radius: 50%;
 }
 
 .shopping-cart h3 {
-  font-size: 1.6rem;
-  padding-bottom: 0.5rem;
+  font-size: 1.4rem;
 }
 
 .shopping-cart .item-price {
