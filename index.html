@@ -71,6 +71,19 @@
                     </div>
                 </div>
             </template>
+            <h4 x-show="!$store.cart.items.length" style="margin-top: 1rem;">Card is Empty</h4>
+            <h4 x-show="$store.cart.items.length">Total : <span x-text="rupiah($store.cart.total)"></span></h4>
+
+            <div class="form-container">
+                <form action="" id="checkoutForm">
+                    <h5>Customer Detail</h5>
+
+                    <label for="name">
+                        <span>Name</span>
+                        <input type="text" name="name" id="name">
+                    </label>
+                </form>
+            </div>
         </div>
         <!-- Shopping Cart end -->
 
