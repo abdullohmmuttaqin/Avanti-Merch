@@ -34,7 +34,7 @@
             <a href="#home">Home</a>
             <a href="#about">Tentang Kami</a>
             <a href="#menu">Dagangan Kami</a>
-            <a href="#products">Produk Kami</a>
+            <a href="#products">Produk Unggulan Kami</a>
             <a href="#contact">Kontak</a>
         </div>
 
@@ -64,9 +64,9 @@
                         <div class="item-price">
                             <span x-text="rupiah(item.price)"></span> &times;
                             <button id="remove">&minus;</button>
-                            <span>1</span>
+                            <span x-text="item.quantity"></span>
                             <button id="add">&plus;</button> &equals;
-                            <span>Rp. 30.000</span>
+                            <span x-text="item.total"></span>
                         </div>
                     </div>
                 </div>
@@ -254,7 +254,7 @@
             <a href="#home">HOME</a>
             <a href="#about">TENTANG KAMI</a>
             <a href="#menu">DAGANGAN KAMI</a>
-            <a href="#products">PRODUK KAMI</a>
+            <a href="#products">PRODUK UNGGULAN KAMI</a>
             <a href="#contact">KONTAK</a>
         </div>
 
