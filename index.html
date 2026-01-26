@@ -75,6 +75,7 @@
             <h4 x-show="$store.cart.items.length">Total : <span x-text="rupiah($store.cart.total)"></span></h4>
 
             <div class="form-container" x-show="$store.cart.items.length">
+                <input type="hidden" name="items" x-model="JSON.stringify($store.cart.items)">
                 <form action="" id="checkoutForm">
                     <h5>Customer Detail</h5>
 
