@@ -20,9 +20,9 @@ document.addEventListener('alpine:init', () => {
 
             // Jika belum ada / cart masih kosong
             if (!cartItem) {
-                this.items.push({...newItem, quantity: 1, total: newItem.price});
+                this.items.push({ ...newItem, quantity: 1, total: newItem.price });
                 this.quantity++;
-                this.total += newItem.price;   
+                this.total += newItem.price;
             } else {
                 // Jika barang sudah ada, cek apakah barang beda atau sama dengan yang ada di cart
                 this.items = this.items.map((item) => {
@@ -34,7 +34,7 @@ document.addEventListener('alpine:init', () => {
                         item.quantity++;
                         item.total = item.price * item.quantity;
                         this.quantity++;
-                        this.total += item.price;  
+                        this.total += item.price;
                         return item;
                     }
                 });
@@ -69,6 +69,28 @@ document.addEventListener('alpine:init', () => {
         }
     });
 });
+
+// Form Validation
+const checkoutButton = document.querySelector('.checkout-button');
+checkoutButton.disabled = true;
+
+const form = document.querySelector('#checkoutForm');
+
+form.addEventListener('keyup', function () {
+    for (let i = 0; i < form.elements.length; i++) {
+        if (form.elements[i].value.length !== 0) {
+            checkoutButton.classList.remove('disabled');
+            checkoutButton.classList.add('disabled');
+        } else {
+            return false;
+        }
+    }
+    checkoutButton.disabled = false;
+    checkoutButton.classList.remove('disabled');
+
+});
+
+
 
 // Konversi ke Rupiah
 const rupiah = (Number) => {
