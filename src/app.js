@@ -5,7 +5,7 @@ document.addEventListener("alpine:init", () => {
       { id: 2, name: "TS NECK DEEP", img: "nd.jpg", price: 258000 },
       { id: 3, name: "TS GREEN DAY", img: "gd.jpg", price: 875000 },
       { id: 4, name: "TS BLINK-182", img: "bl182.jpg", price: 958000 },
-      { id: 5, name: "TS SYSTEM OF A DOWN", img: "soad.jpg", price: 459000 },
+      { id: 5, name: "TS SYSTEM OF A DOWN", img: "soad.jpg", price: 500000 },
     ],
   }));
 
