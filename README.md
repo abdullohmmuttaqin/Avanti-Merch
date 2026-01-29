@@ -14,7 +14,7 @@ Avanti‑Merch adalah proyek pembelajaran sekaligus implementasi sistem pembayar
 
 | Nama           | Peran                       | Akun GitHub        |
 | -------------- | --------------------------- | ------------------ |
-| Abdul Muttaqin | Backend / Integrasi Payment | @abdullohmmuttaqin |
+| Abdmmuttaqin | Backend / Integrasi Payment | @abdullohmmuttaqin |
 | Ain Murphy     | Frontend / Reviewer         | @ainmurphys        |
 
 ---
