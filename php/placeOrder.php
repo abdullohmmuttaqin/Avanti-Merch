@@ -11,21 +11,18 @@ $dotenv->load();
 \Midtrans\Config::$isSanitized = true;
 \Midtrans\Config::$is3ds = true;
 
-$params = array(
-    'transaction_details' => array(
+$params = [
+    'transaction_details' => [
         'order_id' => rand(),
         'gross_amount' => $_POST['total'],
-    ),
+    ],
     'item_details' => json_decode($_POST['items'], true),
-    'customer_details' => array(
+    'customer_details' => [
         'first_name' => $_POST['name'],
         'email' => $_POST['email'],
         'phone' => $_POST['phone'],
-    ),
-);
+    ],
+];
 
 $snapToken = \Midtrans\Snap::getSnapToken($params);
-
 echo $snapToken;
-
-?>

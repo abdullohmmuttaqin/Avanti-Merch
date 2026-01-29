@@ -1,6 +1,5 @@
-/vendor
-.env
+composer.lock
+composer.phar
+vendor/
 .idea
-.DS_Store
-midtrans-php-master
-node_modules
+.DS_STORE
