@@ -1,38 +1,28 @@
-<?php 
+<?php
+require_once __DIR__ . '/../vendor/autoload.php';
 
-/*Install Midtrans PHP Library (https://github.com/Midtrans/midtrans-php)
-composer require midtrans/midtrans-php
-                              
-Alternatively, if you are not using **Composer**, you can download midtrans-php library 
-(https://github.com/Midtrans/midtrans-php/archive/master.zip), and then require 
-the file manually.   
+use Dotenv\Dotenv;
 
-require_once dirname(__FILE__) . '/pathofproject/Midtrans.php'; */
+$dotenv = Dotenv::createImmutable(__DIR__ . '/../');
+$dotenv->load();
 
-//SAMPLE REQUEST START HERE
-
-// Set your Merchant Server Key
-\Midtrans\Config::$serverKey = 'YOUR_SERVER_KEY';
-// Set to Development/Sandbox Environment (default). Set to true for Production Environment (accept real transaction).
-\Midtrans\Config::$isProduction = false;
-// Set sanitization on (default)
+\Midtrans\Config::$serverKey = $_ENV['MIDTRANS_SERVER_KEY'];
+\Midtrans\Config::$isProduction = filter_var($_ENV['MIDTRANS_IS_PRODUCTION'], FILTER_VALIDATE_BOOLEAN);
 \Midtrans\Config::$isSanitized = true;
-// Set 3DS transaction for credit card to true
 \Midtrans\Config::$is3ds = true;
 
-$params = array(
-    'transaction_details' => array(
+$params = [
+    'transaction_details' => [
         'order_id' => rand(),
-        'gross_amount' => 10000,
-    ),
-    'customer_details' => array(
-        'first_name' => 'budi',
-        'last_name' => 'pratama',
-        'email' => 'budi.pra@example.com',
-        'phone' => '08111222333',
-    ),
-);
+        'gross_amount' => $_POST['total'],
+    ],
+    'item_details' => json_decode($_POST['items'], true),
+    'customer_details' => [
+        'first_name' => $_POST['name'],
+        'email' => $_POST['email'],
+        'phone' => $_POST['phone'],
+    ],
+];
 
 $snapToken = \Midtrans\Snap::getSnapToken($params);
-
-?>
+echo $snapToken;

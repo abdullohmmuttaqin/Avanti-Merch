@@ -1,0 +1,13 @@
+# Environment
+.env
+
+# Dependencies
+/vendor
+
+# Composer
+composer.phar
+
+# OS / Editor
+.DS_Store
+.idea
+.vscode
